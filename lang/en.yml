@@ -11,6 +11,19 @@ boton:
   amigos: Friensds
 crear:
   cuenta: Or create an account here!
+crearC:
+  cuenta: Create Account
+  usuario: Enter your name
+  apellidos: Enter your Surname
+  correo: Enter your Email
+  correo2: Mail
+  validarC: Enter your email correctly
+  password: Enter your Password
+  validar: Re-enter your Password
+  crear: Create
+  face: Create with Facebook
+  google: Create with Google
+
 ingresar:
   face: Login with Facebook
   ggle: Login with Google
@@ -99,3 +112,4 @@ option:
   appBar: Setting
   darkmode: Use Dark mode?
   salir: Sign Out
+ 

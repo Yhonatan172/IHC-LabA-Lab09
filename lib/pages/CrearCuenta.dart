@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:proyecto_final_ihc/aplication_localizations.dart';
 import 'package:proyecto_final_ihc/pages/User.dart';
 
 class CrearCuenta extends StatefulWidget {
@@ -8,15 +9,16 @@ class CrearCuenta extends StatefulWidget {
 }
 
 class _CrearCuentaState extends State<CrearCuenta> {
-  Widget renderNameInput() {
+  Widget renderNameInput(BuildContext context) {
+     AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
-        decoration: InputDecoration(hintText: 'Ingrese su nombre'),
+        decoration: InputDecoration(hintText: localizations.t('crearC.usuario')),
         validator: (String value) {
           if (value.isEmpty) {
             //si no se tiene nada se retorna eel erroe
-            return 'Ingrese su nombre';
+            return localizations.t('crearC.usuario');
           }
           return null;
         },
@@ -25,15 +27,16 @@ class _CrearCuentaState extends State<CrearCuenta> {
     );
   }
 
-  Widget renderLastNameInput() {
+  Widget renderLastNameInput(BuildContext context) {
+    AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
-        decoration: InputDecoration(hintText: 'Ingrese sus Apellidos'),
+        decoration: InputDecoration(hintText: localizations.t('crearC.apellidos')),
         validator: (String value) {
           if (value.isEmpty) {
             //si no se tiene nada se retorna eel erroe
-            return 'Ingrese sus Apellidos';
+            return localizations.t('crearC.apellidos');
           }
           return null;
         },
@@ -42,16 +45,17 @@ class _CrearCuentaState extends State<CrearCuenta> {
     );
   }
 
-  Widget renderEmailInput() {
+  Widget renderEmailInput(BuildContext context) {
+      AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
         decoration: InputDecoration(
-            hintText: 'Ingrese su Correo Electronico', labelText: 'Correo'),
+            hintText: localizations.t('crearC.correo'), labelText: localizations.t('crearC.correo2')),
         validator: (String value) {
           if (value.isEmpty) {
             //si no se tiene nada se retorna eel erroe
-            return 'Ingrese correctamente su correo';
+            return localizations.t('crearC.validarC');
           }
           return null;
         },
@@ -60,18 +64,19 @@ class _CrearCuentaState extends State<CrearCuenta> {
     );
   }
 
-  Widget renderPasswordInput() {
+  Widget renderPasswordInput(BuildContext context) {
+    AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
         decoration: InputDecoration(
-            hintText: 'Ingrese su Contraseña', labelText: 'Contraseña'),
+            hintText: localizations.t('crearC.password'), labelText:localizations.t('ingreso.password') ),
         obscureText: true,
         /* <-- Aquí */
         validator: (String value) {
           if (value.isEmpty) {
             //si no se tiene nada se retorna eel erroe
-            return 'Ingrese correctamente su password';
+            return localizations.t('validadores.password');
           }
           return null;
         },
@@ -80,18 +85,19 @@ class _CrearCuentaState extends State<CrearCuenta> {
     );
   }
 
-  Widget renderRetypePasswordInput() {
+  Widget renderRetypePasswordInput(BuildContext context) {
+    AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
         decoration: InputDecoration(
-            hintText: 'Contraseña', labelText: 'Repita su Contraseña'),
+            hintText: localizations.t('ingreso.password'), labelText: localizations.t('crearC.validar')),
         obscureText: true,
         /* <-- Aquí */
         validator: (String value) {
           if (value.isEmpty) {
             //si no se tiene nada se retorna eel erroe
-            return 'Ingrese correctamente su password';
+            return localizations.t('validadores.password');
           }
           return null;
         },
@@ -101,11 +107,12 @@ class _CrearCuentaState extends State<CrearCuenta> {
   }
 
   Widget renderLoginButton(BuildContext context) {
+    AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.only(top: 32),
       child: RaisedButton(
         textColor: Colors.white,
-        child: Text("Entrar"),
+        child: Text(localizations.t('crearC.crear')),
         onPressed: () {
           if (!_formKey.currentState.validate()) {
             return;
@@ -124,6 +131,7 @@ class _CrearCuentaState extends State<CrearCuenta> {
   }
 
   Widget renderDivisor() {
+  
     return Container(
       padding: const EdgeInsets.only(top: 32),
       child: Row(
@@ -139,7 +147,8 @@ class _CrearCuentaState extends State<CrearCuenta> {
     );
   }
 
-  Widget renderFacebookButton() {
+  Widget renderFacebookButton(BuildContext context) {
+     AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.only(top: 32),
       child: RaisedButton(
@@ -151,7 +160,7 @@ class _CrearCuentaState extends State<CrearCuenta> {
             Icon(FontAwesomeIcons.facebookSquare),
             Padding(
               padding: const EdgeInsets.only(left: 16),
-              child: Text('Crear con Facebook'),
+              child: Text(localizations.t('crearC.face')),
             ),
           ],
         ),
@@ -160,7 +169,8 @@ class _CrearCuentaState extends State<CrearCuenta> {
     );
   }
 
-  Widget renderGoogleButton() {
+  Widget renderGoogleButton(BuildContext context) {
+    AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Container(
       padding: const EdgeInsets.only(top: 8),
       child: RaisedButton(
@@ -172,7 +182,7 @@ class _CrearCuentaState extends State<CrearCuenta> {
             Icon(FontAwesomeIcons.google),
             Padding(
               padding: const EdgeInsets.only(left: 16),
-              child: Text('Crear con Google'),
+              child: Text(localizations.t('crearC.google')),
             ),
           ],
         ),
@@ -186,9 +196,10 @@ class _CrearCuentaState extends State<CrearCuenta> {
   final passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+     AplicacionLocalizations localizations = AplicacionLocalizations.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Crear Cuenta'),
+        title: Text(localizations.t('crearC.cuenta')),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -206,15 +217,15 @@ class _CrearCuentaState extends State<CrearCuenta> {
                   fit: BoxFit.scaleDown,
                 ),
               ),
-              renderNameInput(),
-              renderLastNameInput(),
-              renderEmailInput(),
-              renderPasswordInput(),
-              renderRetypePasswordInput(),
+              renderNameInput(context),
+              renderLastNameInput(context),
+              renderEmailInput(context),
+              renderPasswordInput(context),
+              renderRetypePasswordInput(context),
               renderLoginButton(context),
               renderDivisor(),
-              renderFacebookButton(),
-              renderGoogleButton(),
+              renderFacebookButton(context),
+              renderGoogleButton(context),
               Container(
                 width: 10,
                 height: 10,

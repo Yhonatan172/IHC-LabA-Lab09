@@ -11,6 +11,19 @@ boton:
   amigos: Amigos
 crear:
   cuenta: O crea aqui una cuenta aqui!
+crearC:
+  cuenta: Crear Cuenta
+  usuario: Ingrese su nombre
+  apellidos: Ingrese sus Apellidos
+  correo: Ingrese su Correo Electronico
+  correo2: Correo
+  validarC: Ingrese correctamente su correo
+  password: Ingrese su Contraseña
+  validar: Ingrese nuevamente su Contraseña
+  crear: Crear
+  face: Crear con Facebook
+  google: Crear con Google
+
 ingresar:
   face: Entrar con Facebook
   ggle: Entrar con Google
@@ -96,4 +109,4 @@ option:
   appBar: Configuración
   darkmode: ¿Usar el modo oscuro?
   salir: Desconectar
-
+  

@@ -16,6 +16,20 @@ boton:
 crear:
   cuenta: Ou crie uma conta aqui
 
+crearC:
+  cuenta: Criar uma conta
+  usuario: Digite seu nome
+  apellidos: Digite seu sobrenome
+  correo: Digite seu e-mail
+  correo2: e-mail
+  validarC: Digite seu e-mail corretamente
+  password: Coloque sua senha
+  validar: Digite sua senha novamente
+  crear: Crio
+  face: Crie com o Facebook
+  google: Crie com o Google
+
+
 ingresar:
   face: Entrar com conta do facebook
   ggle: Entrar com conta google

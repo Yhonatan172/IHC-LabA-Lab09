@@ -44,7 +44,7 @@ class SettingsPage extends StatelessWidget {
                     builder: (context) => LoginPage(),
                   ));
                 },
-                child: Text('Desconectar'),
+                child: Text(localizations.t('option.salir')),
               ),
             ),
           ],
